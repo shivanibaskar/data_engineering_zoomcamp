@@ -1,24 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
+#Ingestion code 
 import argparse
 import pandas as pd
 from sqlalchemy import create_engine
 from time import time
 import os
-
-
-#username 
-#password
-#hostname 
-#port
-#database name 
-#table name 
-#url of the csv
-
-
 
 
 def main(params):
@@ -61,21 +46,6 @@ def main(params):
     df.to_sql(name = tablename , con=engine, if_exists='replace')
     print("done")
 
-
-
-    # while True: 
-    #     t_start = time()
-
-    #     df = next(df_iter)
-
-    #     df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-    #     df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
-        
-    #     df.to_sql(name=tablename, con=engine, if_exists='append')
-
-    #     t_end = time()
-
-    #     print('inserted another chunk, took %.3f second' % (t_end - t_start))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Ingest parquet data to postgress')
