@@ -18,6 +18,6 @@ Replace `<username>`, `<password>`, `<hostname>`, `<port>`, `<databasename>`, `<
 - `--color`: Color of the taxi data ("yellow" or "green").
 
 
-[Title](<Homework 1.ipynb>)
+[Queries for homework 1](<Homework 1.ipynb>)
 
 This file has queries that were executed to get the relevant answers.
